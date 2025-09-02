@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV Rahmat Fadhilah</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    :root {
+      --brand-blue: #0072CE;
+      /* Pertamina Blue */
+      --brand-red: #E30613;
+      /* Pertamina Red */
+    }
+
+    body {
+      background: #f8f9fa;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.65;
+    }
+
+    .cv-container {
+      max-width: 900px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, .08);
+      position: relative;
+    }
+
+    header .name {
+      color: var(--brand-blue);
+      font-weight: 800;
+    }
+
+    .card-header {
+      background-color: rgba(0, 114, 206, .05);
+      border-bottom: 2px solid var(--brand-red);
+      color: var(--brand-blue);
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--brand-red);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Download button: desktop = pojok kanan; mobile = FAB kanan bawah */
+    .download-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+    }
+
+    @media (max-width: 575.98px) {
+      .download-btn {
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        z-index: 1030;
+        border-radius: 999px;
+        padding: .55rem .65rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, .18);
+      }
+    }
+
+    /* Kontak: rapikan di layar kecil */
+    .contact {
+      gap: .5rem .75rem;
+    }
+
+    .contact .sep {
+      color: #adb5bd;
+    }
+
+    @media (max-width: 575.98px) {
+      .contact {
+        font-size: .95rem;
+      }
+
+      .contact .sep {
+        display: none;
+      }
+
+      /* sembunyikan pipa di mobile biar tidak berantakan */
+      header .name {
+        font-size: 1.25rem;
+      }
+    }
+
+    /* Badges: supaya tetap rapi ketika banyak */
+    .skills {
+      row-gap: .5rem;
+    }
+
+    /* Print: tetap simple, sembunyikan tombol */
+    @media print {
+
+      .download-btn,
+      [data-copy] {
+        display: none !important;
+      }
+
+      .cv-container {
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .card-header {
+        background: #fff !important;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .download-btn {
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        z-index: 1030;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, .18);
+      }
+
+      .download-btn i {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container my-4 my-sm-5 p-3 p-sm-4 p-md-5 cv-container">
+    <!-- Tombol download -->
+    <button class="btn btn-outline-secondary btn-sm download-btn" title="Download CV sebagai PDF"
+      aria-label="Download CV sebagai PDF" onclick="window.print()">
+      <i class="bi bi-download"></i>
+    </button>
+
+    <!-- Header -->
+    <header class="text-center mb-4 mb-sm-5">
+      <p class="name fs-4 fs-sm-3 mb-1">Rahmat Fadhilah</p>
+      <p class="lead text-secondary mb-0 d-flex flex-wrap align-items-center justify-content-center contact">
+        <span class="d-inline-flex align-items-center gap-1">
+          <i class="bi bi-telephone"></i>
+          <span>+62 857-8740-6311</span>
+          <button class="btn btn-sm btn-light border py-0 px-1 ms-1" data-copy="+6285787406311" title="Salin nomor"
+            aria-label="Salin nomor">
+            <i class="bi bi-copy"></i>
+          </button>
+        </span>
+        <span class="sep">|</span>
+        <span class="d-inline-flex align-items-center gap-1">
+          <i class="bi bi-envelope"></i>
+          <a href="mailto:rahmatf.9f@gmail.com" class="text-decoration-none">rahmatf.9f@gmail.com</a>
+        </span>
+        <span class="sep">|</span>
+        <span class="d-inline-flex align-items-center gap-1">
+          <i class="bi bi-linkedin"></i>
+          <a href="https://linkedin.com/in/it-rahmatfadhilah" target="_blank" rel="noopener"
+            class="text-decoration-none">LinkedIn Profile</a>
+        </span>
+        <span class="sep">|</span>
+        <span class="d-inline-flex align-items-center gap-1">
+          <i class="bi bi-geo-alt"></i> Tangerang, Indonesia
+        </span>
+      </p>
+    </header>
+
+    <!-- Ringkasan -->
+    <section class="card shadow-sm mb-4">
+      <div class="card-header">Ringkasan Profesional</div>
+      <div class="card-body">
+        <p class="mb-0">
+          IT Developer dengan pengalaman 2 tahun mengembangkan aplikasi berbasis web dengan arsitektur microservices.
+          Berhasil memimpin peningkatkan performa dan skalabilitas aplikasi dengan melakukan rewrite code dari stored
+          procedure ke C# .NET 8. Memiliki keterampilan pendukung seperti Docker, Jenkins, Kafka dan tool-tool terkait
+          microservices lainnya.
+        </p>
+      </div>
+    </section>
+
+    <!-- Pengalaman -->
+    <section class="card shadow-sm mb-4">
+      <div class="card-header">Pengalaman Kerja</div>
+      <div class="card-body">
+        <article class="mb-4">
+          <h3 class="h5 mb-1">R&amp;D Staff</h3>
+          <p class="mb-1"><strong>PT Inovasi Mitra Sejati</strong> | Tangerang</p>
+          <p class="text-muted small">Jan 2024 – Sekarang</p>
+          <ul class="mb-0">
+            <li>Rewrite code dari stored procedure ke .NET 8 (Clean Architecture).</li>
+            <li>Kontainerisasi aplikasi menggunakan Docker.</li>
+            <li>Mengimplementasi CI/CD dengan Jenkins.</li>
+            <li>Menerapkan event-driven architecture dengan Apache Kafka.</li>
+            <li>Membangun share library untuk mempercepat development.</li>
+          </ul>
+        </article>
+        <article>
+          <h3 class="h5 mb-1">IT Developer</h3>
+          <p class="mb-1"><strong>PT Inovasi Mitra Sejati</strong> | Tangerang</p>
+          <p class="text-muted small">Sep 2023 – Des 2023</p>
+          <ul class="mb-0">
+            <li>Membuat aplikasi menggunakan Angular, .NET 6, dan SQL stored procedure.</li>
+            <li>Membuat laporan menggunakan Crystal Report.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Pendidikan -->
+    <section class="card shadow-sm mb-4">
+      <div class="card-header">Pendidikan</div>
+      <div class="card-body">
+        <p class="mb-1"><strong>S1 Fisika</strong>, Universitas Mulawarman, Samarinda</p>
+        <p class="text-muted small mb-0">Lulus 2022</p>
+      </div>
+    </section>
+
+    <!-- Keterampilan -->
+    <section class="card shadow-sm mb-2 mb-sm-4">
+      <div class="card-header">Keterampilan</div>
+      <div class="card-body">
+        <div class="d-flex flex-wrap skills gap-2">
+          <span class="badge text-bg-light border">SQL Server</span>
+          <span class="badge text-bg-light border">PostgreSQL</span>
+          <span class="badge text-bg-light border">Oracle</span>
+          <span class="badge text-bg-light border">Redis</span>
+          <span class="badge text-bg-light border">.NET</span>
+          <span class="badge text-bg-light border">Blazor</span>
+          <span class="badge text-bg-light border">Docker</span>
+          <span class="badge text-bg-light border">Kafka</span>
+          <span class="badge text-bg-light border">Jenkins</span>
+          <span class="badge text-bg-light border">Kong</span>
+          <span class="badge text-bg-light border">k6</span>
+          <span class="badge text-bg-light border">OWASP ZAP</span>
+          <span class="badge text-bg-light border">Clean Architecture</span>
+          <span class="badge text-bg-light border">SOLID</span>
+          <span class="badge text-bg-light border">RESTful API</span>
+          <span class="badge text-bg-light border">OpenAPI</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Copy to clipboard (ikon berubah sementara)
+    document.querySelectorAll("[data-copy]").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(btn.dataset.copy);
+          btn.innerHTML = '<i class="bi bi-check2"></i>';
+          setTimeout(() => btn.innerHTML = '<i class="bi bi-copy"></i>', 1100);
+        } catch {
+          alert('Tidak bisa menyalin.');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
